@@ -7,6 +7,7 @@ import hello.hello_spring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+// ctrl + shift + T : 테스트 생성(껍데기만)
 public class MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
