@@ -1,14 +1,13 @@
 package hello.hello_spring.repository;
 
 import hello.hello_spring.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
-    private static long sequence = 0L;
+    private static Long sequence = 0L;
 
     @Override
     public Member save(Member member) {
@@ -18,7 +17,7 @@ public class MemoryMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Optional<Member> findById(long id) {
+    public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
     }
 
